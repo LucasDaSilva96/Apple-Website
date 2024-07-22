@@ -28,7 +28,9 @@ export default function VideoCarousel() {
     isPlaying: false,
   });
 
-  const [loadedData, setLoadedData] = React.useState<any[]>([]);
+  const [loadedData, setLoadedData] = React.useState<
+    React.SyntheticEvent<HTMLVideoElement, Event>[]
+  >([]);
   const { isEnd, isLastVideo, isPlaying, startPlay, videoId } = video;
 
   useGSAP(() => {
@@ -123,7 +125,7 @@ export default function VideoCarousel() {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [videoId, startPlay]);
+  }, [videoId, startPlay, isPlaying]);
 
   // TODO Add index number to handleProcess ??
   const handleProcess = (type: string, index?: number) => {
