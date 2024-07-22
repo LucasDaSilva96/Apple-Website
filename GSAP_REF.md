@@ -1,4 +1,4 @@
-``sh
+```
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -196,6 +196,8 @@ This is just a paragraph
 }
 
 export default App;
+
+```
 
 ```
 
