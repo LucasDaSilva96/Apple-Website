@@ -32,6 +32,12 @@ export default function VideoCarousel() {
   const { isEnd, isLastVideo, isPlaying, startPlay, videoId } = video;
 
   useGSAP(() => {
+    gsap.to('#slider', {
+      transform: `translateX(${-100 * videoId}%)`,
+      duration: 2,
+      ease: 'power2.inOut',
+    });
+
     gsap.to('#video', {
       scrollTrigger: {
         trigger: '#video',
@@ -106,7 +112,8 @@ export default function VideoCarousel() {
 
       const animUpdate = () => {
         anim.progress(
-          videoRef.current[videoId] / hightlightsSlides[videoId].videoDuration
+          videoRef.current[videoId].currentTime /
+            hightlightsSlides[videoId].videoDuration
         );
       };
 
@@ -119,13 +126,13 @@ export default function VideoCarousel() {
   }, [videoId, startPlay]);
 
   // TODO Add index number to handleProcess ??
-  const handleProcess = (type: string) => {
+  const handleProcess = (type: string, index?: number) => {
     switch (type) {
       case 'video-end':
         setVideo((prev) => ({
           ...prev,
           isEnd: true,
-          videoId: prev.videoId + 1,
+          videoId: prev.videoId + index!,
         }));
         break;
 
@@ -138,6 +145,10 @@ export default function VideoCarousel() {
         break;
 
       case 'play':
+        setVideo((prev) => ({ ...prev, isPlaying: !prev.isPlaying }));
+        break;
+
+      case 'pause':
         setVideo((prev) => ({ ...prev, isPlaying: !prev.isPlaying }));
         break;
       default:
@@ -159,10 +170,18 @@ export default function VideoCarousel() {
                   onPlay={() => {
                     setVideo((prev) => ({ ...prev, isPlaying: true }));
                   }}
+                  onEnded={() =>
+                    index !== 3
+                      ? handleProcess('video-end', 1)
+                      : handleProcess('video-last')
+                  }
                   id='video'
                   playsInline={true}
                   preload='auto'
                   muted
+                  className={`${
+                    slide.id === 3 && 'translate-x-44'
+                  } pointer-events-none`}
                   onLoadedMetadata={(e) => handleLoadedMetaData(index, e)}
                 >
                   <source src={slide.video} type='video/mp4' />
