@@ -207,7 +207,7 @@ export default function VideoCarousel() {
           {videoRef.current.map((_, i) => (
             <span
               key={i}
-              className='mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer'
+              className='mx-2 w-3 h-3 bg-gray-200 rounded-full relative '
               ref={(el) => (videoDivRef.current[i] = el as HTMLDivElement)}
             >
               <span
