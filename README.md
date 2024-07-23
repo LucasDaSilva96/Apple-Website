@@ -1,13 +1,75 @@
-# Apple Website
+# Apple Website clone
 
-I built a website that looks just like the iPhone 15 Pro page from Apple. I used React, Three.js, and GSAP to make it work smoothly on any device.
+[!Hero section](/public//images/Apple-website-1.png)
+[!Preview section](/public//images/Apple-website-2.png)
 
-It attracted a good number of visitors so far, around 50, and performed really well, loading in just 350 ms. The click-through rate was about 65%, showing that people were engaging with the content.
+## Table of Contents
 
-In addition to the impressive performance, the website also features a stunning design that closely resembles the Apple aesthetic. The sleek and modern interface, combined with smooth animations and interactive elements, provides users with an immersive browsing experience.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-To ensure compatibility across different devices, the website is fully responsive and optimized for mobile, tablet, and desktop screens. Whether users are accessing it from their smartphones, iPads, or laptops, they can enjoy the same seamless experience.
+## Introduction
 
-Furthermore, the website incorporates intuitive navigation and user-friendly features, making it easy for visitors to explore and interact with the content. From scrolling through product details to watching demo videos, users can effortlessly navigate through the website and access the information they need.
+This project is a clone of the Apple website. It aims to replicate the design and functionality of the original site, providing a similar user experience.
 
-Overall, the website has been well-received by visitors, and the positive engagement metrics indicate its success. With its impressive performance, stunning design, and user-friendly features, the website offers a compelling experience for anyone interested in the iPhone 15 Pro.
+## Features
+
+- Responsive design
+- Interactive navigation menu
+- Product showcase
+- Footer with links and information
+- Smooth scrolling and animations
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- TypeScript
+- GSAP
+- Three.js
+- React
+
+## Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/LucasDaSilva96/Apple-Website.git
+   ```
+2. Navigate to the project directory:
+
+   ```sh
+   cd APPLE-WEBSITE
+   ```
+
+3. Install the project dependencies using npm:
+
+```sh
+npm install
+```
+
+4. run the server:
+
+```sh
+npm run dev
+```
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Contact
+
+Your Name - [dasilvajunior881@gmail.com](mailto:dasilvajunior881@gmail.com)

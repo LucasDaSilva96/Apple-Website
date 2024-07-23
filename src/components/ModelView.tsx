@@ -4,12 +4,13 @@ import * as THREE from 'three';
 import Lights from './Lights';
 import IphoneModel from './Iphone';
 import Loader from './Loader';
+import { OrbitControls as ORBITCONTROLER } from 'three-stdlib';
 
 type ModelViewProps = {
   index: number;
   groupRef: React.MutableRefObject<THREE.Group>;
   gsapType: string;
-  controlRef: React.MutableRefObject<OrbitControls>;
+  controlRef: React.MutableRefObject<ORBITCONTROLER>;
   setRotationState: React.Dispatch<React.SetStateAction<number>>;
   item: { id: number; title: string; color: string[]; img: string };
   size: string;
@@ -32,7 +33,7 @@ export default function ModelView({
         index === 2 ? 'right-[-100%]' : ''
       } `}
     >
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.4} />
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
 

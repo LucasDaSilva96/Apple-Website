@@ -11,8 +11,9 @@ export const animateWithGsap = (
     y?: number;
     x?: number;
     duration?: number;
-  },
-  scrollTriggerProps?: { start?: string; end?: string }
+    scale?: number;
+    ease?: string;
+  }
 ) => {
   gsap.to(target, {
     ...animationProps,
