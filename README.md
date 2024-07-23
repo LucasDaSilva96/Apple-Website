@@ -1,7 +1,7 @@
 # Apple Website clone
 
-[!Hero section](/public//images/Apple-website-1.png)
-[!Preview section](/public//images/Apple-website-2.png)
+![Hero section](/public//images/Apple-website-1.png)
+![Preview section](/public//images/Apple-website-2.png)
 
 ## Table of Contents
 
